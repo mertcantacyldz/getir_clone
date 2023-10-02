@@ -51,7 +51,7 @@ export default function Header({dispatch}) {
         </nav>
 
 
-        <nav className='flex flex-row items-center gap-x-7 '>
+        <nav className=' hidden  md:flex flex-row items-center gap-x-7 '>
           <button onClick={()=>{dispatch({type:'open_language'})}} href='#' className='font-sans text-[#dbdbff] flex items-center justify-between'>
             <BiGlobe className='text-[#dbdbff] text-[20px]'></BiGlobe> <span className='ml-1'> Türkçe(TR)</span> </button>
           <button onClick={()=>{dispatch({type:'open_login'})}}  href='#' className='font-inherit font-semibold text-[#dbdbff] flex items-center justify-between'>

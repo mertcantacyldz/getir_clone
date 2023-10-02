@@ -20,17 +20,16 @@ export default function Footer() {
 
   useEffect(() => {
     if (windowWith <= 768) {
-      // Eğer pencere genişliği 768 pikselden küçükse ve herhangi bir oluşturma listesi açıksa, tümünü kapatın.
+
       if (isOpen.some(item => item === true)) {
         setIsOpen([false, false, false]);
-      } else {
-        // Eğer pencere genişliği 768 pikselden büyükse ve hiçbir oluşturma listesi açık değilse, tümünü açın.
-        if (isOpen.every(item => item === false)) {
-          setIsOpen([true, true, true]);
-        }
       }
-      
-    } 
+    } else {
+     
+      if (isOpen.every(item => item === false)) {
+        setIsOpen([true, true, true]);
+      }
+    }
     
   }, [windowWith]);
 
@@ -70,7 +69,7 @@ export default function Footer() {
           </ol>
 
         </div>
-        <div className='flex flex-col mr-6 flex-1' >
+        <div className='flex flex-col mr-6 flex-1 mt-7 md:mt-0' >
         <div className='flex justify-between'>
             <span className='text-lg text-pri_brand_color inline-block mb-4'>Getir'i Keşfedin</span>
             {windowWith <= 768 &&

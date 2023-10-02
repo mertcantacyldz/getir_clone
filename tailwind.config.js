@@ -16,7 +16,8 @@ module.exports = {
         'box_shadow': '#5d3ebc0a',
         'modal_bg': '#18112db8',
         'close_button' : '#a2a2a2',
-        'footer_button' : '#F3F0FE'
+        'footer_button' : '#F3F0FE',
+        'gray1' : '#525252'
       },
       height: {
         '11.5': '2.813rem',

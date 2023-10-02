@@ -9,6 +9,9 @@ import FotterBottom from './components/FotterBottom';
 import Modal from './components/Modal';
 import {  useReducer } from 'react';
 import './App.css'
+import { useWindowWidth } from '@react-hook/window-size'
+import LocationBar from './components/LocationBar';
+
 
  console.log('app')
 const initialState = {
@@ -17,6 +20,7 @@ const initialState = {
   language: false,
   signUp: false
 }
+
 
 const reducer = (state, action) => {
 
@@ -35,7 +39,7 @@ const reducer = (state, action) => {
 }
 function App() {
 
-
+  const windowWith = useWindowWidth();
   const [state, dispatch] = useReducer(reducer, initialState)
 
 
@@ -48,6 +52,7 @@ console.log('app222')
     <>
     
       <Header dispatch={dispatch} ></Header>
+      { windowWith<=768 && <LocationBar></LocationBar>}
       <HeroSection></HeroSection>
       <Categories></Categories>
       <MobileApp></MobileApp>
