@@ -5,12 +5,15 @@ import { useWindowWidth } from '@react-hook/window-size'
 
 export default function Footer() {
 
-  const [isOpen, setIsOpen] = useState([false, false, false]);
+  const [isOpen, setIsOpen] = useState([true, true, true]);
   const windowWith = useWindowWidth();
   const [isRotated, setIsRotated] = useState(false);
 
   const toggleCollapse = (index) => {
-    setIsOpen([!isOpen[0], isOpen[1], isOpen[2]]);
+    const updatedIsOpen = [...isOpen];
+    updatedIsOpen[index] = !updatedIsOpen[index];
+    setIsOpen(updatedIsOpen);
+
     setIsRotated(!isRotated);
   };
 
@@ -20,7 +23,13 @@ export default function Footer() {
       // Eğer pencere genişliği 768 pikselden küçükse ve herhangi bir oluşturma listesi açıksa, tümünü kapatın.
       if (isOpen.some(item => item === true)) {
         setIsOpen([false, false, false]);
+      } else {
+        // Eğer pencere genişliği 768 pikselden büyükse ve hiçbir oluşturma listesi açık değilse, tümünü açın.
+        if (isOpen.every(item => item === false)) {
+          setIsOpen([true, true, true]);
+        }
       }
+      
     } 
     
   }, [windowWith]);
@@ -65,7 +74,7 @@ export default function Footer() {
         <div className='flex justify-between'>
             <span className='text-lg text-pri_brand_color inline-block mb-4'>Getir'i Keşfedin</span>
             {windowWith <= 768 &&
-              <button onClick={() => toggleCollapse(1)} className='bg-footer_button w-6 h-6 flex items-center justify-center rounded-md group'>
+              <button onClick={() => toggleCollapse(0)} className='bg-footer_button w-6 h-6 flex items-center justify-center rounded-md group'>
               <img  className={`${
           isRotated ? 'group-focus:rotate-180 transition-all ease-linear' : 'group-focus:rotate-0 transition-all ease-linear'
         }`}  src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iNiIgdmlld0JveD0iMCAwIDEwIDYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik05IDFMNSA1TDEgMSIgc3Ryb2tlPSIjNUQzRUJDIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K'></img>
