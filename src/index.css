@@ -1,13 +1,31 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css');
+
+
+@layer base {
+    html, body {
+        @apply bg-zinc-50
+    }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+
+
+
+
+.header_elements{
+
+    @apply  bg-brand_color hover:bg-pri_brand_color  rounded-t-md transition  duration-100 flex items-center  mr-1;
+};
+
+
+.menu-flag button {
+    @apply px-3.5 border-2 border-solid border-border_color rounded-md h-14 bg-white focus:border-pri_brand_color
+};
+.menu-flag button >span span:nth-child(2) {
+    @apply font-sans text-sm pl-2
+};
+
