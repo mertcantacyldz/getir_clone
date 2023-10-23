@@ -97,7 +97,7 @@ console.log('hero')
 
   return (
    /* h-[500px] olmadna 6px taşma var neden öğren */ <div className='  relative h-auto   md:h-[500px]     md:before:bg-gradient-to-r md:before:from-pri_brand_color md:before:to-transparent before:inset-0  before:h-full before:w-full   md:before:absolute before:z-10'>
- {onlyWidth > 750 && <Slider {...settings}>
+ {onlyWidth > 766 && <Slider {...settings}>
  <div className=''>
    <img className='w-full h-[500px] object-cover ' src="https://cdn.getir.com/getirweb-images/common/hero-posters/getir-mainpage-4.jpg"></img>
  </div>
