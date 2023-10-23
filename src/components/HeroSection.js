@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { useState } from 'react';
 import ReactFlagsSelect from "react-flags-select";
 import { PiWarningCircleBold } from 'react-icons/pi'
-import { useWindowWidth} from '@react-hook/window-size'
+import { useWindowWidth } from '@react-hook/window-size'
 
 
 export default function HeroSection() {
@@ -15,7 +15,7 @@ export default function HeroSection() {
   const [selected, setSelected] = useState("TR")
   const onlyWidth = useWindowWidth()
 
-console.log('hero')
+  console.log('hero')
 
 
   const handleChange = (e) => {
@@ -35,17 +35,17 @@ console.log('hero')
         console.log("boşluk");
         setShow(false)
 
-      } else if(!isNaN(newValue)){
+      } else if (!isNaN(newValue)) {
 
         setShow(true)
       }
-        
-       
-       
+
+
+
 
     }
 
-  
+
 
     console.log('x')
   }
@@ -56,11 +56,11 @@ console.log('hero')
     if (inputValue === "") {
       setErrorMessage("Lütfen telefon numarası giriniz.");
       setShow(false)
-      
+
     } else if (isNaN(inputValue)) {
       setErrorMessage("Lütfen geçerli bir telefon numarası giriniz.");
       setShow(false)
-    } else if(!isNaN(inputValue)){
+    } else if (!isNaN(inputValue)) {
 
       setShow(true)
     }
@@ -97,27 +97,27 @@ console.log('hero')
 
   return (
    /* h-[500px] olmadna 6px taşma var neden öğren */ <div className='  relative h-auto   md:h-[500px]     md:before:bg-gradient-to-r md:before:from-pri_brand_color md:before:to-transparent before:inset-0  before:h-full before:w-full   md:before:absolute before:z-10'>
- {onlyWidth > 766 && <Slider {...settings}>
- <div className=''>
-   <img className='w-full h-[500px] object-cover ' src="https://cdn.getir.com/getirweb-images/common/hero-posters/getir-mainpage-4.jpg"></img>
- </div>
- <div>
-   <img className='w-full h-[500px] object-cover ' src="https://cdn.getir.com/getirweb-images/common/hero-posters/getir-mainpage-1.jpg"></img>
- </div>
- <div>
-   <img className='w-full h-[500px] object-cover' src="https://cdn.getir.com/getirweb-images/common/hero-posters/getir-mainpage-2.jpg"></img>
- </div>
+      {onlyWidth > 766 && <Slider {...settings}>
+        <div className=''>
+          <img className='w-full h-[500px] object-cover ' src="https://cdn.getir.com/getirweb-images/common/hero-posters/getir-mainpage-4.jpg"></img>
+        </div>
+        <div>
+          <img className='w-full h-[500px] object-cover ' src="https://cdn.getir.com/getirweb-images/common/hero-posters/getir-mainpage-1.jpg"></img>
+        </div>
+        <div>
+          <img className='w-full h-[500px] object-cover' src="https://cdn.getir.com/getirweb-images/common/hero-posters/getir-mainpage-2.jpg"></img>
+        </div>
 
-</Slider>
- }
-     
+      </Slider>
+      }
+
       <div className='  container max-w-screen-xl   relative md:absolute  top-1/2 -translate-y-1 md:-translate-y-1/2 left-1/2 -translate-x-1/2  z-20  flex justify-between px-0 md:px-5 '>
         <div className='hidden md:block'>
           <img className='h-[180px] w-[180px]' src="https://getir.com/_next/static/images/bimutluluk-b3a7fcb14fc9a9c09b60d7dc9b1b8fd6.svg"></img>
           <h1 className='text-4xl text-white font-sans mt-10 font-semibold'> Dakikalar içinde <br></br>kapınızda</h1>
         </div>
 
-        <div className='flex h-auto justify-center items-center w-full md:w-[400px]  '>
+        <div className='flex  justify-center items-center w-full md:w-[400px]  '>
           <div className='bg-zinc-50  rounded-lg p-3 md:p-6 flex flex-col items-center w-full  z-20'>
             <h5 className='text-pri_brand_color mb-3 text-center text-lg font-medium'> Giriş yap ve kayıt ol</h5>
 
