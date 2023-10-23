@@ -141,7 +141,7 @@ console.log('hero')
 
                     onBlur={handleBlur} ></input>
 
-                  <label htmlFor='phoneNumber' className={`absolute text-sm pl-4 text-gray-500 peer-focus:-translate-y-4 transition-all duration-200 peer-focus:text-pri_brand_color peer-focus:font-light  peer-focus:text-xs ${(inputValue && inputValue.length > 0) ? '-translate-y-4 text-pri_brand_color text-xs' : null
+                  <label htmlFor='phoneNumber' className={`absolute text-sm pl-4 text-gray-500 peer-focus:-translate-y-4 transition-all duration-200 peer-focus:text-pri_brand_color  peer-focus:text-xs ${(inputValue && inputValue.length > 0) ? '-translate-y-4 text-pri_brand_color text-xs' : null
                     }`}> Telefon Numarası</label>
 
                   {!show ? (<PiWarningCircleBold className='h-6 w-6 absolute right-2 text-error_color' ></PiWarningCircleBold>) : null}
