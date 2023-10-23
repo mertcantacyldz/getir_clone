@@ -23,7 +23,7 @@
 
 
 .menu-flag button {
-    @apply px-3.5 border-2 border-solid border-border_color rounded-md h-14 bg-white focus:border-pri_brand_color
+    @apply px-3.5 border-2 border-solid border-border_color rounded-sm h-14 bg-white focus:border-pri_brand_color
 };
 .menu-flag button >span span:nth-child(2) {
     @apply font-sans text-sm pl-2

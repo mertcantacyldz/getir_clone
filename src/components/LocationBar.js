@@ -3,8 +3,8 @@ import { FaLocationDot } from 'react-icons/fa6'
 
 export default function () {
     return (
-        <div className=' w-full bg-white flex justify-between'>
-            <div className='flex justify-center items-center'>
+        <div className=' w-full  bg-white flex justify-between'>
+            <div className='flex justify-center items-center my-3'>
                <FaLocationDot className='text-brand_color mx-3'></FaLocationDot>
                 <p className='text-gray1 font-medium'> Teslimat Adresi belirle</p>
             </div>

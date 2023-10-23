@@ -8,7 +8,6 @@ import MobileApp from './components/MobileApp';
 import FotterBottom from './components/FotterBottom';
 import Modal from './components/Modal';
 import {  useReducer } from 'react';
-import './App.css'
 import { useWindowWidth } from '@react-hook/window-size'
 import LocationBar from './components/LocationBar';
 

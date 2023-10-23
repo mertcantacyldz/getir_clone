@@ -118,7 +118,7 @@ console.log('hero')
         </div>
 
         <div className='flex h-auto justify-center items-center w-full md:w-[400px]  '>
-          <div className='bg-zinc-50  rounded-lg p-6 flex flex-col items-center w-full  z-20'>
+          <div className='bg-zinc-50  rounded-lg p-3 md:p-6 flex flex-col items-center w-full  z-20'>
             <h5 className='text-pri_brand_color mb-3 text-center text-lg font-medium'> Giriş yap ve kayıt ol</h5>
 
 
@@ -135,7 +135,7 @@ console.log('hero')
               />
               <div className='flex  flex-col w-full ml-2 relative '>
                 <div className=' w-full flex items-center'>
-                  <input id='phoneNumber' className={`bg-white h-14 pl-4 w-full text-sm pt-[10px] rounded-md border-2 border-border_color  hover:border-pri_brand_color ${!show ? 'focus:border-error_color hover:border-error_color border-error_color' : 'focus:border-pri_brand_color'
+                  <input id='phoneNumber' className={`bg-white h-14 pl-4 w-full text-sm pt-[10px] rounded-sm border-2 border-border_color  hover:border-pri_brand_color ${!show ? 'focus:border-error_color hover:border-error_color border-error_color' : 'focus:border-pri_brand_color'
                     } outline-none peer`}
                     onChange={handleChange}
 

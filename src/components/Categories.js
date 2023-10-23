@@ -27,7 +27,7 @@ useEffect (()=>{
  setCategories(categoriesData)
 },[])
   return (
-    <div className=' bg-white w-full shadow-sm py-6'  >
+    <div className=' bg-neutral-100 md:bg-white w-full shadow-sm py-6'  >
 
       <div className='container mx-auto max-w-screen-xl'>
         <h6 className='mb-2 text-base font-semibold'>Kategoriler</h6>
